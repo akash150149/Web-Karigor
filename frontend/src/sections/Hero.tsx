@@ -15,7 +15,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-700 mb-8"
+          className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary mb-8"
         >
           <Sparkles className="w-4 h-4" />
           <span className="text-sm font-semibold uppercase tracking-wider">Software Development Excellence</span>
@@ -25,7 +25,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-5xl lg:text-7xl font-extrabold text-gray-900 leading-tight mb-6"
+          className="text-5xl lg:text-7xl font-extrabold text-foreground leading-tight mb-6"
         >
           Building <span className="text-indigo-600">Scalable</span> Digital Products <br className="hidden lg:block" /> for Your Business
         </motion.h1>
@@ -34,7 +34,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-xl text-gray-600 max-w-3xl mx-auto mb-10 leading-relaxed"
+          className="text-xl text-muted-foreground max-w-3xl mx-auto mb-10 leading-relaxed"
         >
           We specialize in crafting high-performance ecommerce platforms, custom portfolio websites, 
           and provide top-notch hosting and maintenance services to help your business grow online.
@@ -48,14 +48,14 @@ const Hero = () => {
         >
           <a
             href="#projects"
-            className="group px-8 py-4 bg-gray-900 text-white rounded-xl font-bold flex items-center space-x-2 hover:bg-gray-800 transition-all shadow-xl hover:shadow-2xl"
+            className="group px-8 py-4 bg-primary text-primary-foreground rounded-xl font-bold flex items-center space-x-2 hover:bg-primary/90 transition-all shadow-xl hover:shadow-2xl"
           >
             <span>View Our Work</span>
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </a>
           <a
             href="#book-call"
-            className="px-8 py-4 bg-white text-gray-900 border-2 border-gray-200 rounded-xl font-bold hover:border-indigo-600 hover:text-indigo-600 transition-all shadow-lg"
+            className="px-8 py-4 bg-background text-foreground border-2 border-border rounded-xl font-bold hover:border-indigo-600 hover:text-indigo-600 transition-all shadow-lg"
           >
             Book a Call
           </a>
@@ -68,14 +68,14 @@ const Hero = () => {
            transition={{ duration: 0.8, delay: 0.8 }}
            className="mt-20 relative px-4"
         >
-          <div className="bg-gradient-to-b from-indigo-50 to-white rounded-3xl p-2 shadow-2xl overflow-hidden border border-indigo-100">
-            <div className="bg-white rounded-2xl h-64 lg:h-96 flex items-center justify-center text-gray-400">
+          <div className="bg-gradient-to-b from-indigo-500/10 to-transparent rounded-3xl p-2 shadow-2xl overflow-hidden border border-border">
+            <div className="bg-card rounded-2xl h-64 lg:h-96 flex items-center justify-center text-muted-foreground">
               {/* This is where a mockup image would go */}
               <div className="text-center">
-                 <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4 text-indigo-600">
+                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 text-primary">
                     <Rocket className="w-8 h-8" />
                  </div>
-                 <p className="font-medium">Premium Digital Solutions</p>
+                 <p className="font-medium text-foreground">Premium Digital Solutions</p>
               </div>
             </div>
           </div>

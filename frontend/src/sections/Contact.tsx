@@ -32,12 +32,12 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-white">
+    <section id="contact" className="py-24 bg-background transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-indigo-600 rounded-[3rem] p-12 lg:p-20 relative overflow-hidden shadow-2xl">
+        <div className="bg-indigo-600 dark:bg-indigo-900/50 rounded-[3rem] p-12 lg:p-20 relative overflow-hidden shadow-2xl">
           {/* Background circles */}
           <div className="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 bg-white/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-indigo-500 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-indigo-500/30 rounded-full blur-3xl"></div>
 
           <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
@@ -70,13 +70,13 @@ const Contact = () => {
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              className="bg-white rounded-3xl p-8 lg:p-10 shadow-xl"
+              className="bg-card rounded-3xl p-8 lg:p-10 shadow-xl border border-border"
             >
               {status === 'success' ? (
                 <div className="text-center py-10">
                   <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-6" />
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Message Sent!</h3>
-                  <p className="text-gray-600 mb-8">Thank you for reaching out. We'll be in touch soon.</p>
+                  <h3 className="text-2xl font-bold text-foreground mb-2">Message Sent!</h3>
+                  <p className="text-muted-foreground mb-8">Thank you for reaching out. We'll be in touch soon.</p>
                   <button 
                     onClick={() => setStatus(null)}
                     className="text-indigo-600 font-bold hover:underline"
@@ -88,39 +88,39 @@ const Contact = () => {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 gap-6">
                     <div>
-                      <label className="block text-sm font-bold text-gray-700 mb-2">Full Name</label>
+                      <label className="block text-sm font-bold text-foreground mb-2">Full Name</label>
                       <input
                         type="text"
                         name="name"
                         required
-                        className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:bg-white outline-none transition-all"
+                        className="w-full px-4 py-3 bg-muted/50 border border-border text-foreground rounded-xl focus:ring-2 focus:ring-indigo-500 focus:bg-card outline-none transition-all"
                         placeholder="John Doe"
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-bold text-gray-700 mb-2">Email Address</label>
+                      <label className="block text-sm font-bold text-foreground mb-2">Email Address</label>
                       <input
                         type="email"
                         name="email"
                         required
-                        className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:bg-white outline-none transition-all"
+                        className="w-full px-4 py-3 bg-muted/50 border border-border text-foreground rounded-xl focus:ring-2 focus:ring-indigo-500 focus:bg-card outline-none transition-all"
                         placeholder="john@example.com"
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-bold text-gray-700 mb-2">Your Message</label>
+                      <label className="block text-sm font-bold text-foreground mb-2">Your Message</label>
                       <textarea
                         name="message"
                         required
                         rows={4}
-                        className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:bg-white outline-none transition-all resize-none"
+                        className="w-full px-4 py-3 bg-muted/50 border border-border text-foreground rounded-xl focus:ring-2 focus:ring-indigo-500 focus:bg-card outline-none transition-all resize-none"
                         placeholder="Tell us about your project..."
                       ></textarea>
                     </div>
                   </div>
                   <button
                     disabled={status === 'sending'}
-                    className={`w-full py-4 rounded-xl font-bold flex items-center justify-center space-x-2 transition-all ${status === 'sending' ? 'bg-gray-400' : 'bg-indigo-600 hover:bg-indigo-700 text-white shadow-lg hover:shadow-indigo-200'}`}
+                    className={`w-full py-4 rounded-xl font-bold flex items-center justify-center space-x-2 transition-all ${status === 'sending' ? 'bg-muted text-muted-foreground' : 'bg-indigo-600 hover:bg-indigo-700 text-white shadow-lg dark:shadow-none'}`}
                   >
                     <span>{status === 'sending' ? 'Sending...' : 'Send Message'}</span>
                     <Send className="w-5 h-5" />

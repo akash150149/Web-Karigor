@@ -4,7 +4,7 @@ import { Calendar, Clock, Sparkles } from 'lucide-react';
 
 const BookACall = () => {
   return (
-    <section id="book-call" className="py-24 bg-gray-50">
+    <section id="book-call" className="py-24 bg-muted/30 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <motion.div
@@ -20,7 +20,7 @@ const BookACall = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl lg:text-5xl font-extrabold text-gray-900 mb-6"
+            className="text-4xl lg:text-5xl font-extrabold text-foreground mb-6"
           >
             Schedule a Consultation
           </motion.h2>
@@ -29,7 +29,7 @@ const BookACall = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-gray-600 max-w-2xl mx-auto text-lg"
+            className="text-muted-foreground max-w-2xl mx-auto text-lg"
           >
             Choose a time that works for you and let's discuss how we can help your business thrive in the digital landscape.
           </motion.p>
@@ -40,10 +40,10 @@ const BookACall = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-white rounded-[2rem] border border-gray-100 shadow-2xl overflow-hidden grid grid-cols-1 md:grid-cols-2"
+            className="bg-card rounded-[2rem] border border-border shadow-2xl overflow-hidden grid grid-cols-1 md:grid-cols-2"
           >
             {/* Left side info */}
-            <div className="p-10 lg:p-12 bg-indigo-600 text-white">
+            <div className="p-10 lg:p-12 bg-indigo-600 dark:bg-indigo-900/50 text-white">
                <h3 className="text-2xl font-bold mb-6">Discovery Session</h3>
                <p className="text-indigo-100 mb-8">What we'll cover:</p>
                <ul className="space-y-4 mb-10">
@@ -66,34 +66,34 @@ const BookACall = () => {
             <div className="p-10 lg:p-12">
                <form className="space-y-6">
                  <div>
-                   <label className="block text-sm font-bold text-gray-700 mb-2">Name</label>
-                   <input type="text" placeholder="Your Name" className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-indigo-500 outline-none transition-all" />
+                   <label className="block text-sm font-bold text-foreground mb-2">Name</label>
+                   <input type="text" placeholder="Your Name" className="w-full px-4 py-3 bg-muted/50 border border-border text-foreground rounded-xl focus:ring-2 focus:ring-indigo-500 outline-none transition-all" />
                  </div>
                  <div>
-                   <label className="block text-sm font-bold text-gray-700 mb-2">Email</label>
-                   <input type="email" placeholder="your@email.com" className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-indigo-500 outline-none transition-all" />
+                   <label className="block text-sm font-bold text-foreground mb-2">Email</label>
+                   <input type="email" placeholder="your@email.com" className="w-full px-4 py-3 bg-muted/50 border border-border text-foreground rounded-xl focus:ring-2 focus:ring-indigo-500 outline-none transition-all" />
                  </div>
                  <div className="grid grid-cols-2 gap-4">
                    <div>
-                     <label className="block text-sm font-bold text-gray-700 mb-2">Preferred Date</label>
+                     <label className="block text-sm font-bold text-foreground mb-2">Preferred Date</label>
                      <div className="relative">
-                        <Calendar className="absolute left-3 top-3.5 w-5 h-5 text-gray-400 pointer-events-none" />
-                        <input type="date" className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-indigo-500 outline-none transition-all" />
+                        <Calendar className="absolute left-3 top-3.5 w-5 h-5 text-muted-foreground pointer-events-none" />
+                        <input type="date" className="w-full pl-10 pr-4 py-3 bg-muted/50 border border-border text-foreground rounded-xl focus:ring-2 focus:ring-indigo-500 outline-none transition-all" />
                      </div>
                    </div>
                    <div>
-                     <label className="block text-sm font-bold text-gray-700 mb-2">Preferred Time</label>
+                     <label className="block text-sm font-bold text-foreground mb-2">Preferred Time</label>
                      <div className="relative">
-                        <Clock className="absolute left-3 top-3.5 w-5 h-5 text-gray-400 pointer-events-none" />
-                        <input type="time" className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-indigo-500 outline-none transition-all" />
+                        <Clock className="absolute left-3 top-3.5 w-5 h-5 text-muted-foreground pointer-events-none" />
+                        <input type="time" className="w-full pl-10 pr-4 py-3 bg-muted/50 border border-border text-foreground rounded-xl focus:ring-2 focus:ring-indigo-500 outline-none transition-all" />
                      </div>
                    </div>
                  </div>
                  <div>
-                   <label className="block text-sm font-bold text-gray-700 mb-2">Message (Optional)</label>
-                   <textarea rows={3} placeholder="Tell us briefly about your project..." className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-indigo-500 outline-none transition-all resize-none"></textarea>
+                   <label className="block text-sm font-bold text-foreground mb-2">Message (Optional)</label>
+                   <textarea rows={3} placeholder="Tell us briefly about your project..." className="w-full px-4 py-3 bg-muted/50 border border-border text-foreground rounded-xl focus:ring-2 focus:ring-indigo-500 outline-none transition-all resize-none"></textarea>
                  </div>
-                 <button type="button" className="w-full py-4 bg-gray-900 text-white rounded-xl font-bold hover:bg-gray-800 transition-all shadow-xl">
+                 <button type="button" className="w-full py-4 bg-primary text-primary-foreground rounded-xl font-bold hover:bg-primary/90 transition-all shadow-xl">
                    Confirm Booking
                  </button>
                </form>

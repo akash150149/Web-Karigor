@@ -10,7 +10,7 @@ import BookACall from './sections/BookACall';
 
 function App() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background text-foreground transition-colors duration-300">
       <Navbar />
       <main>
         <Hero />
@@ -22,10 +22,10 @@ function App() {
         <BookACall />
       </main>
       
-      <footer className="bg-gray-900 border-t border-white/10 py-12">
+      <footer className="bg-card border-t border-border py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-gray-500 font-medium">
-            © {new Date().getFullYear()} Web Karigor. All rights reserved.
+          <p className="text-muted-foreground font-medium">
+            © {new Date().getFullYear()} Web-Karigor. All rights reserved.
           </p>
         </div>
       </footer>

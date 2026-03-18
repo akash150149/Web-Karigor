@@ -4,7 +4,7 @@ import { Users, Target, Zap, CheckCircle2 } from 'lucide-react';
 
 const AboutUs = () => {
   return (
-    <section id="about" className="py-24 bg-gray-900 text-white overflow-hidden">
+    <section id="about" className="py-24 bg-card text-foreground transition-colors duration-300 overflow-hidden border-y border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <motion.div
@@ -12,8 +12,8 @@ const AboutUs = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold mb-8">Engineering Excellence with a Human Touch</h2>
-            <p className="text-gray-400 text-xl mb-8 leading-relaxed">
+            <h2 className="text-4xl font-bold mb-8 text-foreground">Engineering Excellence with a Human Touch</h2>
+            <p className="text-muted-foreground text-xl mb-8 leading-relaxed">
               We are a dedicated team of developers, designers, and strategists passionate about building high-performance 
               digital products that drive business growth. Our mission is to simplify complex technology for our clients.
             </p>
@@ -25,12 +25,12 @@ const AboutUs = () => {
                 { title: 'Our Team', icon: <Users className="w-6 h-6 text-pink-400" />, text: 'A collaborative group of experts committed to delivering exceptional results.' }
               ].map((item, i) => (
                 <div key={i} className="flex items-start space-x-4">
-                  <div className="mt-1 p-2 bg-white/5 rounded-lg">
+                  <div className="mt-1 p-2 bg-primary/10 rounded-lg">
                     {item.icon}
                   </div>
                   <div>
-                    <h4 className="font-bold text-lg mb-1">{item.title}</h4>
-                    <p className="text-gray-500">{item.text}</p>
+                    <h4 className="font-bold text-lg mb-1 text-foreground">{item.title}</h4>
+                    <p className="text-muted-foreground">{item.text}</p>
                   </div>
                 </div>
               ))}
