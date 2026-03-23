@@ -1,0 +1,5 @@
+{
+  "comment": "Add dates or dateTime ranges that should be blocked (team vacation, internal meetings, etc.)",
+  "blockedDates": [],
+  "blockedSlots": []
+}

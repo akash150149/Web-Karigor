@@ -7,6 +7,7 @@ import OurProcess from './sections/OurProcess';
 import AboutUs from './sections/AboutUs';
 import Contact from './sections/Contact';
 import BookACall from './sections/BookACall';
+import FloatingBookButton from './components/FloatingBookButton';
 
 function App() {
   return (
@@ -29,6 +30,9 @@ function App() {
           </p>
         </div>
       </footer>
+
+      {/* Floating Book a Call button — appears after scrolling */}
+      <FloatingBookButton />
     </div>
   );
 }
