@@ -4,17 +4,17 @@ import { ExternalLink, Github } from 'lucide-react';
 
 const projects = [
   {
-    title: 'Modern Ecommerce Platform',
+    title: 'HaatBaazar',
     description: 'A full-featured online store with real-time inventory and stripe integration.',
-    tech: ['React', 'Node.js', 'PostgreSQL', 'Tailwind'],
+    // tech: ['React', 'Node.js', 'PostgreSQL', 'Tailwind'],
     image: 'https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&q=80&w=1000',
-    live: '#',
-    github: '#'
+    live: 'https://haat-baazar.onrender.com',
+    github: 'https://github.com/akash150149/HaatBaazar'
   },
   {
-    title: 'Creative Agency Portfolio',
+    title: 'Cafe',
     description: 'An interactive showcase for a leading design studio with fluid animations.',
-    tech: ['Next.js', 'Framer Motion', 'TypeScript'],
+    // tech: ['Next.js', 'Framer Motion', 'TypeScript'],
     image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1000',
     live: '#',
     github: '#'
@@ -44,11 +44,11 @@ const Projects = () => {
               Our Featured Projects
             </motion.h2>
             <motion.p
-               initial={{ opacity: 0, x: -20 }}
-               whileInView={{ opacity: 1, x: 0 }}
-               viewport={{ once: true }}
-               transition={{ delay: 0.1 }}
-               className="text-muted-foreground"
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="text-muted-foreground"
             >
               Explore our latest work, showcasing our expertise in building high-quality digital solutions across various industries.
             </motion.p>
@@ -81,24 +81,24 @@ const Projects = () => {
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                   <div className="flex space-x-4">
-                      <a href={project.live} className="p-3 bg-background rounded-full text-indigo-600 hover:bg-indigo-600 hover:text-white transition-colors">
-                        <ExternalLink className="w-5 h-5" />
-                      </a>
-                      <a href={project.github} className="p-3 bg-background rounded-full text-foreground hover:bg-foreground hover:text-background transition-colors">
-                        <Github className="w-5 h-5" />
-                      </a>
-                   </div>
+                  <div className="flex space-x-4">
+                    <a href={project.live} className="p-3 bg-background rounded-full text-indigo-600 hover:bg-indigo-600 hover:text-white transition-colors">
+                      <ExternalLink className="w-5 h-5" />
+                    </a>
+                    <a href={project.github} className="p-3 bg-background rounded-full text-foreground hover:bg-foreground hover:text-background transition-colors">
+                      <Github className="w-5 h-5" />
+                    </a>
+                  </div>
                 </div>
               </div>
               <div className="p-8">
-                <div className="flex flex-wrap gap-2 mb-4">
+                {/* <div className="flex flex-wrap gap-2 mb-4">
                   {project.tech.map((t, i) => (
                     <span key={i} className="px-3 py-1 bg-primary/10 text-primary text-xs font-bold rounded-full">
                       {t}
                     </span>
                   ))}
-                </div>
+                </div> */}
                 <h3 className="text-2xl font-bold text-foreground mb-3 group-hover:text-indigo-600 transition-colors">
                   {project.title}
                 </h3>

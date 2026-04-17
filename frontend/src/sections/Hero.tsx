@@ -18,7 +18,7 @@ const Hero = () => {
           className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary mb-8"
         >
           <Sparkles className="w-4 h-4" />
-          <span className="text-sm font-semibold uppercase tracking-wider">Software Development Excellence</span>
+          <span className="text-sm font-semibold uppercase tracking-wider">Software Development and Marketing Excellence</span>
         </motion.div>
 
         <motion.h1
@@ -36,7 +36,7 @@ const Hero = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-xl text-muted-foreground max-w-3xl mx-auto mb-10 leading-relaxed"
         >
-          We specialize in crafting high-performance ecommerce platforms, custom portfolio websites, 
+          We specialize in crafting high-performance ecommerce platforms, custom portfolio websites,
           and provide top-notch hosting and maintenance services to help your business grow online.
         </motion.p>
 
@@ -62,24 +62,24 @@ const Hero = () => {
         </motion.div>
 
         {/* Floating tech stack or image placeholder */}
-        <motion.div
-           initial={{ opacity: 0, scale: 0.8 }}
-           animate={{ opacity: 1, scale: 1 }}
-           transition={{ duration: 0.8, delay: 0.8 }}
-           className="mt-20 relative px-4"
-        >
-          <div className="bg-gradient-to-b from-indigo-500/10 to-transparent rounded-3xl p-2 shadow-2xl overflow-hidden border border-border">
-            <div className="bg-card rounded-2xl h-64 lg:h-96 flex items-center justify-center text-muted-foreground">
-              {/* This is where a mockup image would go */}
-              <div className="text-center">
-                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 text-primary">
-                    <Rocket className="w-8 h-8" />
-                 </div>
-                 <p className="font-medium text-foreground">Premium Digital Solutions</p>
-              </div>
-            </div>
-          </div>
-        </motion.div>
+        {/* <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="mt-20 relative px-4"
+        > */}
+        {/* <div className="bg-gradient-to-b from-indigo-500/10 to-transparent rounded-3xl p-2 shadow-2xl overflow-hidden border border-border"> */}
+        {/* <div className="bg-card rounded-2xl h-64 lg:h-96 flex items-center justify-center text-muted-foreground"> */}
+        {/* This is where a mockup image would go */}
+        {/* <div className="text-center">
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 text-primary">
+                  <Rocket className="w-8 h-8" />
+                </div>
+                <p className="font-medium text-foreground">Premium Digital Solutions</p>
+              </div> */}
+        {/* </div> */}
+        {/* </div> */}
+        {/* </motion.div> */}
       </div>
     </section>
   );
